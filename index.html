@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopVault — Premium E-Commerce Store</title>
+    <meta name="description" content="Discover premium products at ShopVault. Browse electronics, accessories, apparel and more with a seamless shopping experience.">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="header-inner">
+            <a href="#" class="logo" id="logo-link">
+                <i class="fas fa-vault"></i>
+                <span>Shop<strong>Vault</strong></span>
+            </a>
+            <nav class="main-nav">
+                <a href="#" class="nav-link active" data-filter="all">All</a>
+                <a href="#" class="nav-link" data-filter="electronics">Electronics</a>
+                <a href="#" class="nav-link" data-filter="accessories">Accessories</a>
+                <a href="#" class="nav-link" data-filter="apparel">Apparel</a>
+                <a href="#" class="nav-link" data-filter="home">Home</a>
+            </nav>
+            <button class="cart-toggle" id="cart-toggle" aria-label="Open shopping cart">
+                <i class="fas fa-shopping-bag"></i>
+                <span class="cart-count" id="cart-count">0</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <span class="hero-badge">New Collection 2026</span>
+            <h1>Discover <span class="gradient-text">Premium</span> Products</h1>
+            <p>Curated selection of the finest electronics, accessories, and lifestyle products. Free shipping on orders over $100.</p>
+            <a href="#products" class="btn-hero">
+                <span>Shop Now</span>
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+        <div class="hero-glow"></div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section" id="products">
+        <div class="section-header">
+            <h2>Featured Products</h2>
+            <p>Handpicked for quality and style</p>
+        </div>
+        <div class="products-grid" id="products-grid">
+            <!-- Products rendered by JS -->
+        </div>
+    </section>
+
+    <!-- Cart Sidebar Overlay -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+
+    <!-- Cart Sidebar -->
+    <aside class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h2><i class="fas fa-shopping-bag"></i> Your Cart</h2>
+            <button class="cart-close" id="cart-close" aria-label="Close cart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Cart items rendered by JS -->
+        </div>
+        <div class="cart-empty hidden" id="cart-empty">
+            <i class="fas fa-bag-shopping"></i>
+            <p>Your cart is empty</p>
+        </div>
+        <div class="cart-footer" id="cart-footer">
+            <div class="cart-summary">
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span id="cart-subtotal">$0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Shipping</span>
+                    <span id="cart-shipping">$0.00</span>
+                </div>
+                <div class="summary-row total">
+                    <span>Total</span>
+                    <span id="cart-total">$0.00</span>
+                </div>
+            </div>
+            <button class="btn-checkout" id="btn-checkout">
+                <i class="fas fa-lock"></i> Secure Checkout
+            </button>
+        </div>
+    </aside>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <i class="fas fa-check-circle"></i>
+        <span id="toast-message">Item added to cart</span>
+    </div>
+
+    <!-- Checkout Success Modal -->
+    <div class="modal-overlay hidden" id="checkout-modal">
+        <div class="modal glass-panel">
+            <div class="modal-icon">
+                <i class="fas fa-circle-check"></i>
+            </div>
+            <h2>Order Placed!</h2>
+            <p>Thank you for your purchase. Your order has been confirmed and will be shipped shortly.</p>
+            <button class="btn-primary" id="modal-close">Continue Shopping</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 ShopVault. Built for CodeAlpha Internship.</p>
+    </footer>
+
+    <script src="js/products.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
